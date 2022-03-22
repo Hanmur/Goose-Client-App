@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Routes,Route, Navigate} from 'react-router-dom'
 // 导入页面
 import Home from "./pages/Home";
 import MainPage from "./pages/MainPage";
-import {Counter} from "./pages/Test";
+import {Test} from "./pages/Test";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path = "/home/*" element = {<Home/>}>
           <Route path = "" element = {<MainPage/>} />
-          <Route path = "test" element = {<Counter/>}/>
         </Route>
+        <Route path = "/test" element = {<Test/>}/>
         <Route path = "*" element = {<Navigate to ="/home"/>}/>
       </Routes>
     </div>

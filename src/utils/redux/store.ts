@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../pages/Test/counterSlice';
+import counterReducer from '../../pages/Test/TestInnerComponent/counterSlice';
 
 // 注册逻辑操作
 export const store = configureStore({

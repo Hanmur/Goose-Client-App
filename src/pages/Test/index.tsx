@@ -1,31 +1,12 @@
 import React, {FC} from 'react'
-import { RootState } from '../../redux/store'
-import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from './counterSlice'
-
+import {Counter} from './TestInnerComponent'
 
 // 示例：返回组件
-export const Counter: FC = () => {
-  const count = useSelector((state: RootState) => state.counter.value)
-  const dispatch = useDispatch()
-
+export const Test: FC = () => {
   return (
     <div>
-      <div>
-        <button
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{ count }</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
-      </div>
+      <h2>测试：计数器</h2>
+      <Counter />
     </div>
   )
 }
